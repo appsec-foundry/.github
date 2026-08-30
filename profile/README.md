@@ -13,8 +13,8 @@ and points at the evidence behind every finding. Run it again once the code has 
 Package `appsec-advisor` as an internal plugin with your own requirements catalog, defaults and
 cost guardrails, without maintaining a fork of the analysis pipeline.
 
-## [ai-secure-coding-baseline](https://github.com/appsec-foundry/ai-secure-coding-baseline)
+## [AI Secure Coding Baseline (aiscb)](https://github.com/appsec-foundry/aiscb)
 
-A short rule set you drop into a project's instructions so Claude Code, Copilot, Codex and the
-others apply it while writing and changing code. Roughly 4,000 tokens, small enough to keep loaded
-permanently. `appsec-advisor` installs it with `/appsec-advisor:install-baseline`.
+A compact, tool-neutral rule set for secure AI-assisted coding. Add it to a project's instructions so Claude Code, GitHub Copilot, Codex, and other compatible assistants apply it whenever they write or change code. At roughly 4,000 tokens, it is small enough to remain loaded throughout a session.
+
+Install it with appsec-advisor using `/appsec-advisor:install-baseline`.
