@@ -15,4 +15,4 @@ cost guardrails, without maintaining a fork of the analysis pipeline.
 
 ## [AI Secure Coding Baseline (aiscb)](https://github.com/appsec-foundry/aiscb)
 
-A compact, tool-neutral rule set for secure AI-assisted coding. Add it to a project's instructions so Claude Code, GitHub Copilot, Codex, and other compatible assistants apply it whenever they write or change code. At roughly 4,000 tokens, it is small enough to remain loaded throughout a session. AISCB is also bundled into the AppSec Advisor plugin.
+A compact, tool-neutral rule set for secure AI-assisted coding. Add it to a project's instructions so Claude Code, GitHub Copilot, Codex, and other compatible assistants apply it whenever they write or change code. At roughly 4,000 tokens, it is small enough to remain loaded throughout a session. `aiscb` is also bundled into the AppSec Advisor plugin.
