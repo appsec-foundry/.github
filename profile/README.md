@@ -4,9 +4,8 @@ Application security tools and research for teams using AI assistants to write a
 
 ## [AppSec Advisor](https://github.com/appsec-foundry/appsec-advisor)
 
-A Claude Code plugin that derives a threat model from code and provider other appsec skills.
-It reconstructs components, data flows and trust boundaries from the repository, runs STRIDE against that model, 
-and points at the evidence behind every finding. Run it again once the code has moved and the model follows.
+A Claude Code plugin that provides a couple of AppSec tool capabilities. Primarily, it derives a technical 
+(implementation-level) threat model from code by using a sophisticated multi-agent pipeline.
 
 ## [AppSec Advisor Packaging Template](https://github.com/appsec-foundry/appsec-advisor-packaging-template)
 
