@@ -9,41 +9,12 @@ secure coding, and application-security reviews.
 
 </div>
 
-## Start here
+Start with **AppSec Advisor**; the other projects complement it.
 
-### [AppSec Advisor](https://github.com/appsec-foundry/appsec-advisor)
+| Project | What it does |
+| --- | --- |
+| **[AppSec Advisor](https://github.com/appsec-foundry/appsec-advisor)**<br><sub>Claude Code plugin · Apache-2.0 · Beta</sub> | Turns a source repository into an evidence-backed, implementation-level STRIDE threat model. Also audits requirements, reviews changes, and enforces CI quality gates. [Quick start →](https://github.com/appsec-foundry/appsec-advisor#quick-start) |
+| **[AI Secure Coding Baseline](https://github.com/appsec-foundry/aiscb)**<br><sub>CC BY 4.0</sub> | Gives Claude Code, GitHub Copilot, Codex, and compatible assistants a compact, tool-neutral security baseline that stays active for a whole coding session. [Quick start →](https://github.com/appsec-foundry/aiscb#quick-start) |
+| **[Packaging Template](https://github.com/appsec-foundry/appsec-advisor-packaging-template)**<br><sub>Apache-2.0</sub> | Packages AppSec Advisor for internal use with your own requirements, defaults, and cost controls, without maintaining a fork. [Quick start →](https://github.com/appsec-foundry/appsec-advisor-packaging-template#quick-start) |
 
-Turn a source repository into an evidence-backed, implementation-level
-threat model. AppSec Advisor uses a multi-agent analysis pipeline to run
-STRIDE, audit requirements, review changes, and enforce CI quality gates.
-
-[Get started →](https://github.com/appsec-foundry/appsec-advisor#quick-start)
-
-<sub>Claude Code plugin · Apache-2.0 · Beta</sub>
-
-## Supporting projects
-
-### [AI Secure Coding Baseline](https://github.com/appsec-foundry/aiscb)
-
-A compact, tool-neutral security baseline for AI coding assistants.
-Designed to remain active throughout a complete coding session.
-
-[Get started →](https://github.com/appsec-foundry/aiscb#quick-start)
-
-<sub>Works with Claude Code, GitHub Copilot, Codex, and compatible assistants · CC BY 4.0</sub>
-
-### [AppSec Advisor Packaging Template](https://github.com/appsec-foundry/appsec-advisor-packaging-template)
-
-Package AppSec Advisor for internal use with your own requirements,
-defaults, and cost controls—without maintaining a fork.
-
-[Get started →](https://github.com/appsec-foundry/appsec-advisor-packaging-template#quick-start)
-
-<sub>Apache-2.0</sub>
-
----
-
-AppSec Advisor is currently in beta. Review findings before using them
-for remediation or formal risk acceptance.
-
-Questions and contributions are welcome in the relevant project's issue tracker.
+<sub>AppSec Advisor is in beta: review its findings before using them for remediation or formal risk acceptance. Questions and contributions are welcome in each project's issue tracker.</sub>
