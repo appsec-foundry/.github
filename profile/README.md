@@ -1,6 +1,6 @@
 # AppSec Foundry
 
-This page features open-source application security projects with an AI focus. Topics include threat modeling, security reviews, and secure-coding guidance.
+This page features open-source application security (AppSec) projects, mostly with an AI focus. Topics include threat modeling, secure code assistant, security reviews, and secure-coding guidance.
 
 - [appsec-advisor](https://github.com/appsec-foundry/appsec-advisor) — A Claude Code plugin that builds STRIDE threat models from repository code and configuration. It also supports requirements audits, change reviews, and CI gates. Currently in beta.
 - [appsec-advisor-examples](https://github.com/appsec-foundry/appsec-advisor-examples) — Example threat models produced by appsec-advisor for deliberately vulnerable apps such as OWASP Juice Shop, available as Markdown, HTML, PDF, YAML, SARIF, and Threat Dragon files.
