@@ -5,9 +5,13 @@
   Threat modeling, secure code assistant, security reviews, and secure-coding guidance.
 </p>
 
-## 🛡️ appsec-advisor
+## appsec-advisor
 
-[**appsec-advisor**](https://github.com/appsec-foundry/appsec-advisor) is a Claude Code plugin that builds STRIDE threat models from repository code and configuration. It reconstructs components, data flows, and trust boundaries from the implementation, then identifies threats and control gaps with evidence from the code. It also supports requirements audits, change reviews, and CI gates. *Currently in beta. Licensed under Apache 2.0.*
+[![Status: beta](https://img.shields.io/badge/status-beta-orange)](https://github.com/appsec-foundry/appsec-advisor)
+[![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue)](https://github.com/appsec-foundry/appsec-advisor/blob/main/LICENSE)
+[![Claude Code plugin](https://img.shields.io/badge/Claude%20Code-plugin-5A67D8)](https://github.com/appsec-foundry/appsec-advisor)
+
+[**appsec-advisor**](https://github.com/appsec-foundry/appsec-advisor) is a Claude Code plugin that builds STRIDE threat models from repository code and configuration. It reconstructs components, data flows, and trust boundaries from the implementation, then identifies threats and control gaps with evidence from the code. It also supports requirements audits, change reviews, and CI gates.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/advisor-figure1.png" alt="Excerpt from Figure 1a of the OWASP Juice Shop threat model: internet attacker, trust boundary, application layer components with STRIDE findings, and data layer assets" width="100%">
@@ -30,11 +34,14 @@ Then run `/appsec-advisor:create-threat-model` inside any repository.
 |---|---|
 | [**appsec-advisor-examples**](https://github.com/appsec-foundry/appsec-advisor-examples) | Example threat models for deliberately vulnerable apps such as OWASP Juice Shop, available as Markdown, HTML, PDF, YAML, SARIF, and Threat Dragon files. |
 | [**appsec-advisor-tools**](https://github.com/appsec-foundry/appsec-advisor-tools) | Scripts for running appsec-advisor from a terminal, cron job, or CI pipeline, with repository profiling and templates for GitHub Actions and GitLab CI. |
-| [**appsec-advisor-packaging-template**](https://github.com/appsec-foundry/appsec-advisor-packaging-template) | A template for packaging appsec-advisor as an internal Claude Code plugin with your organization's configuration. Apache 2.0. |
+| [**appsec-advisor-packaging-template**](https://github.com/appsec-foundry/appsec-advisor-packaging-template) | A template for packaging appsec-advisor as an internal Claude Code plugin with your organization's configuration. |
 
-## 📏 aiscb: AI Secure Coding Baseline
+## aiscb: AI Secure Coding Baseline
 
-[**aiscb**](https://github.com/appsec-foundry/aiscb) provides secure-coding rules for AI coding assistants such as Claude Code, GitHub Copilot, and Codex. A compact core stays in the assistant's context on every prompt, and topic modules such as web authentication, secrets, or supply chain load only when a task needs them. *Licensed under CC BY 4.0.*
+[![License: CC BY 4.0](https://img.shields.io/badge/license-CC%20BY%204.0-blue)](https://github.com/appsec-foundry/aiscb/blob/main/LICENSE)
+[![Works with Claude Code, Copilot, Codex](https://img.shields.io/badge/works%20with-Claude%20Code%20%C2%B7%20Copilot%20%C2%B7%20Codex-5A67D8)](https://github.com/appsec-foundry/aiscb)
+
+[**aiscb**](https://github.com/appsec-foundry/aiscb) provides secure-coding rules for AI coding assistants such as Claude Code, GitHub Copilot, and Codex. A compact core stays in the assistant's context on every prompt, and topic modules such as web authentication, secrets, or supply chain load only when a task needs them.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/aiscb-security-choices.png" alt="Claude Code output for a generated Flask login app, listing the security choices shaped by the baseline" width="100%">
@@ -42,9 +49,12 @@ Then run `/appsec-advisor:create-threat-model` inside any repository.
 
 <p align="center"><sub>Excerpt from Claude Code output for a generated Flask login app: the security choices the baseline shaped.</sub></p>
 
-## <img src="https://raw.githubusercontent.com/appsec-foundry/tss-web/main/assets/img/logo1.png" alt="" height="28"> TSS-WEB *(discontinued)*
+## <img src="https://raw.githubusercontent.com/appsec-foundry/tss-web/main/assets/img/logo1.png" alt="" height="28"> TSS-WEB
 
-[**tss-web**](https://github.com/appsec-foundry/tss-web) is an open security requirements framework covering technical and organizational controls for developing and operating web applications and services. It sits between high-level security policies such as ISO/IEC 27001 and technology-specific secure-coding guidelines. The content is no longer maintained or further developed. *Licensed under CC BY 4.0.*
+[![Status: discontinued](https://img.shields.io/badge/status-discontinued-lightgrey)](https://github.com/appsec-foundry/tss-web)
+[![License: CC BY 4.0](https://img.shields.io/badge/license-CC%20BY%204.0-blue)](https://github.com/appsec-foundry/tss-web/blob/main/LICENSE)
+
+[**tss-web**](https://github.com/appsec-foundry/tss-web) is an open security requirements framework covering technical and organizational controls for developing and operating web applications and services. It sits between high-level security policies such as ISO/IEC 27001 and technology-specific secure-coding guidelines. The content is no longer maintained or further developed.
 
 ---
 
