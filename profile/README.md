@@ -14,7 +14,10 @@
 [**appsec-advisor**](https://github.com/appsec-foundry/appsec-advisor) is a Claude Code plugin for threat modeling on the implementation level. Run it inside a code repository, and it derives the implemented architecture from code and configuration: components, data flows, and trust boundaries. It then identifies threats and control gaps in that architecture. Every finding points to evidence in the repository and comes with remediation guidance. The plugin also assesses planned features and single code changes, audits requirements, and runs as a CI gate.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/advisor-figure1.png" alt="Excerpt from Figure 1a of the OWASP Juice Shop threat model: internet attacker, trust boundary, application layer components with their findings, and data layer assets" width="100%">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/advisor-figure1-dark.png">
+    <img src="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/advisor-figure1.png" alt="Excerpt from Figure 1a of the OWASP Juice Shop threat model: internet attacker, trust boundary, application layer components with their findings, and data layer assets" width="100%">
+  </picture>
 </p>
 
 <p align="center"><sub>Excerpt from Figure 1a of the OWASP Juice Shop threat model: the architecture derived from the repository, with findings per component and the assets each layer stores.</sub></p>
