@@ -1,6 +1,6 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/banner-dark.png">
-  <img src="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/banner-light.png" alt="AppSec Foundry: threat modeling on the implementation level, secure-coding rules for AI assistants, and security reviews" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/banner-slim-dark.png">
+  <img src="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/banner-slim-light.png" alt="AppSec Foundry: threat modeling, secure coding with AI assistants, and security reviews" width="100%">
 </picture>
 
 Open-source application security projects, mostly with an AI focus: appsec-advisor for threat modeling, aiscb for secure coding with AI assistants, and the discontinued TSS-WEB requirements framework.
@@ -67,4 +67,4 @@ Then run `/appsec-advisor:create-threat-model` inside any repository.
 
 Questions and bug reports are welcome in each project's issue tracker.
 
-<sub>Maintained by [Matthias Rohr](https://www.linkedin.com/in/matthias-rohr).</sub>
+<sub>Maintained by [Matthias Rohr](https://www.linkedin.com/in/matthias-rohr/).</sub>
