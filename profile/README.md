@@ -52,7 +52,7 @@ Then run `/appsec-advisor:create-threat-model` inside any repository.
 
 <p align="center"><sub>Excerpt from Claude Code output for a generated Flask login app: the security choices the baseline shaped.</sub></p>
 
-## <img src="https://raw.githubusercontent.com/appsec-foundry/tss-web/main/assets/img/logo1.png" alt="" height="28"> TSS-WEB
+## <img src="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/tss-web-logo.png" alt="" height="28"> TSS-WEB
 
 [![Status: discontinued](https://img.shields.io/badge/status-discontinued-lightgrey)](https://github.com/appsec-foundry/tss-web)
 [![License: CC BY 4.0](https://img.shields.io/badge/license-CC%20BY%204.0-blue)](https://github.com/appsec-foundry/tss-web/blob/main/LICENSE)
