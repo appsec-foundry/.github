@@ -67,4 +67,4 @@ Then run `/appsec-advisor:create-threat-model` inside any repository.
 
 Questions and bug reports are welcome in each project's issue tracker.
 
-<sub>Maintained by [Matthias Rohr](https://www.linkedin.com/in/matthias-rohr/).</sub>
+**Maintainer:** Matthias Rohr &nbsp;<a href="https://www.linkedin.com/in/matthias-rohr/"><img src="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/linkedin.png" alt="LinkedIn" height="16" align="absmiddle"></a> [LinkedIn](https://www.linkedin.com/in/matthias-rohr/)
