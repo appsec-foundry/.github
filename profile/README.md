@@ -11,13 +11,13 @@
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue)](https://github.com/appsec-foundry/appsec-advisor/blob/main/LICENSE)
 [![Claude Code plugin](https://img.shields.io/badge/Claude%20Code-plugin-5A67D8)](https://github.com/appsec-foundry/appsec-advisor)
 
-[**appsec-advisor**](https://github.com/appsec-foundry/appsec-advisor) is a Claude Code plugin that builds STRIDE threat models from repository code and configuration. It reconstructs components, data flows, and trust boundaries from the implementation, then identifies threats and control gaps with evidence from the code. It also supports requirements audits, change reviews, and CI gates.
+[**appsec-advisor**](https://github.com/appsec-foundry/appsec-advisor) is a Claude Code plugin for threat modeling on the implementation level. Run it inside a code repository, and it derives the implemented architecture from code and configuration: components, data flows, and trust boundaries. It then identifies threats and control gaps in that architecture. Every finding points to evidence in the repository and comes with remediation guidance. The plugin also assesses planned features and single code changes, audits requirements, and runs as a CI gate.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/advisor-figure1.png" alt="Excerpt from Figure 1a of the OWASP Juice Shop threat model: internet attacker, trust boundary, application layer components with STRIDE findings, and data layer assets" width="100%">
+  <img src="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/advisor-figure1.png" alt="Excerpt from Figure 1a of the OWASP Juice Shop threat model: internet attacker, trust boundary, application layer components with their findings, and data layer assets" width="100%">
 </p>
 
-<p align="center"><sub>Excerpt from Figure 1a of the OWASP Juice Shop threat model: actors, trust boundary, components with their STRIDE findings, and stored assets.</sub></p>
+<p align="center"><sub>Excerpt from Figure 1a of the OWASP Juice Shop threat model: the architecture derived from the repository, with findings per component and the assets each layer stores.</sub></p>
 
 ### Try it
 
