@@ -1,8 +1,3 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/banner-slim-dark.png">
-  <img src="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/banner-slim-light.png" alt="AppSec Foundry: threat modeling, secure coding with AI assistants, and security reviews" width="100%">
-</picture>
-
 Open-source application security projects, mostly with an AI focus: appsec-advisor for threat modeling, aiscb for secure coding with AI assistants, and the discontinued TSS-WEB requirements framework.
 
 ## appsec-advisor
