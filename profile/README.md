@@ -43,9 +43,9 @@ Then run `/appsec-advisor:create-threat-model` inside any repository.
 - Topic modules such as web authentication, secrets, or supply chain load only when a task needs them.
 - The assistant applies the rules while it writes code and reports remaining risks in a security note.
 
-<img src="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/aiscb-security-choices.png" alt="Claude Code output for a generated Flask login app, listing the security choices shaped by the baseline" width="100%">
+<img src="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/aiscb-crypto-with-without.png" alt="The same prompt in Claude Code without and with aiscb: without it, Claude writes a custom cipher; with it, Claude cites the baseline rule against hand-rolled crypto and asks what the code is for" width="100%">
 
-<sub>Excerpt from Claude Code output for a generated Flask login app: the security choices the baseline shaped.</sub>
+<sub>The same prompt in Claude Code, without and with aiscb. Without the baseline, Claude writes a custom cipher. With it, Claude cites the rule against hand-rolled crypto and asks what the code is for.</sub>
 
 ## <img src="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/tss-web-logo.png" alt="" height="28"> TSS-WEB
 
