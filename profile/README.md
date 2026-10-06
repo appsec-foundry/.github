@@ -35,7 +35,7 @@ Then run `/appsec-advisor:create-threat-model` inside any repository.
 ## aiscb: AI Secure Coding Baseline
 
 [![License: CC BY 4.0](https://img.shields.io/badge/license-CC%20BY%204.0-blue)](https://github.com/appsec-foundry/aiscb/blob/main/LICENSE)
-[![Works with Claude Code, Copilot, Codex](https://img.shields.io/badge/works%20with-Claude%20Code%20%C2%B7%20Copilot%20%C2%B7%20Codex-5A67D8)](https://github.com/appsec-foundry/aiscb)
+[![Works with Claude Code, GitHub Copilot, Codex, Kiro](https://img.shields.io/badge/works%20with-Claude%20Code%20%C2%B7%20GitHub%20Copilot%20%C2%B7%20Codex%20%C2%B7%20Kiro-5A67D8)](https://github.com/appsec-foundry/aiscb)
 
 [**aiscb**](https://github.com/appsec-foundry/aiscb) provides secure-coding rules for AI coding assistants such as Claude Code, GitHub Copilot, and Codex.
 
