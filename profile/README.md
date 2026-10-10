@@ -13,8 +13,8 @@ Open-source application security projects, mostly with an AI focus: appsec-advis
 - Also assesses planned features and single code changes, audits requirements, and runs as a CI gate.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/advisor-figure1-v2-dark.png">
-  <img src="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/advisor-figure1-v2.png" alt="Excerpt from Figure 1a of the OWASP Juice Shop threat model: internet attacker, trust boundary, application layer components with their findings, and data layer assets" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/advisor-figure1-v3-dark.png">
+  <img src="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/advisor-figure1-v3.png" alt="Excerpt from Figure 1a of the OWASP Juice Shop threat model: internet attacker and users, trust boundaries, and the authentication component with its findings and assets" width="100%">
 </picture>
 
 <sub>Excerpt from Figure 1a of the OWASP Juice Shop threat model: the architecture derived from the repository, with findings per component and the assets each layer stores.</sub>
