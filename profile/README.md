@@ -1,4 +1,4 @@
-Open-source application security projects, mostly with an AI focus: AppSec Analyzer for security assessments from source code, AppSec Skills for threat modeling with coding assistants, AppSec Tools for security scoring and requirements, aiscb for secure coding with AI assistants, and the discontinued TSS-WEB requirements framework.
+Open-source application security projects, mostly with an AI focus: AppSec Analyzer for security assessments from source code, AppSec Skills for threat modeling and security reviews with coding assistants, AppSec Tools for security scoring and requirements, aiscb for secure coding with AI assistants, and the discontinued TSS-WEB requirements framework.
 
 ## AppSec Analyzer
 
@@ -32,13 +32,14 @@ For your own code, pass its Git URL or local path to `--repo`. Analyzer needs a 
 
 ## AppSec Skills
 
-[**appsec-skills**](https://github.com/appsec-foundry/appsec-skills) is a collection of application security skills for coding assistants, including threat analysis of changes, security scoring, and authentication and authorization reviews.
+[**appsec-skills**](https://github.com/appsec-foundry/appsec-skills) is a collection of application security skills for coding assistants, including:
 
-[**create-threat-model**](https://github.com/appsec-foundry/appsec-skills/blob/main/skills/create-threat-model/README.md) creates a threat model from requirements, design documents, and team knowledge, even before code exists.
+- [**create-threat-model**](https://github.com/appsec-foundry/appsec-skills/blob/main/skills/create-threat-model/README.md) creates, updates, or reviews a threat model from requirements, design documents, and team knowledge, even before code exists.
+- [**analyze-threats**](https://github.com/appsec-foundry/appsec-skills/blob/main/skills/analyze-threats/README.md) examines features, changes, pull requests, or design decisions for threats.
+- [**security-score**](https://github.com/appsec-foundry/appsec-skills/blob/main/skills/security-score/README.md) scores repositories or rates the security relevance of changes, using the Security Score tool below.
+- [**authnz-review**](https://github.com/appsec-foundry/appsec-skills/blob/main/skills/authnz-review/README.md) reviews authentication and authorization through AppSec Analyzer.
 
-- Writes `threat-model.md` with a system overview and diagram, threat scenarios, existing controls, and recommended changes.
-- Also reviews and updates existing models.
-- Needs neither AppSec Analyzer nor security expertise.
+Install a skill with the Skills CLI, for example:
 
 ```bash
 npx skills@1.7.2 add appsec-foundry/appsec-skills --skill create-threat-model
