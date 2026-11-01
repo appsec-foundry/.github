@@ -1,36 +1,57 @@
-Open-source application security projects, mostly with an AI focus: appsec-advisor for threat modeling, aiscb for secure coding with AI assistants, and the discontinued TSS-WEB requirements framework.
+Open-source application security projects, mostly with an AI focus: AppSec Analyzer for security assessments from source code, AppSec Skills for threat modeling with coding assistants, AppSec Tools for security scoring and requirements, aiscb for secure coding with AI assistants, and the discontinued TSS-WEB requirements framework.
 
-## appsec-advisor
+## AppSec Analyzer
 
-[![Latest release](https://img.shields.io/github/v/release/appsec-foundry/appsec-advisor)](https://github.com/appsec-foundry/appsec-advisor/releases/latest)
-[![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue)](https://github.com/appsec-foundry/appsec-advisor/blob/main/LICENSE)
-[![Claude Code plugin](https://img.shields.io/badge/Claude%20Code-plugin-5A67D8)](https://github.com/appsec-foundry/appsec-advisor)
+[![Status: alpha](https://img.shields.io/badge/status-alpha-orange)](https://github.com/appsec-foundry/appsec-analyzer)
+[![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue)](https://github.com/appsec-foundry/appsec-analyzer/blob/main/LICENSE)
 
-[**appsec-advisor**](https://github.com/appsec-foundry/appsec-advisor) is a Claude Code plugin that derives a threat model from the implementation in a code repository.
+[**appsec-analyzer**](https://github.com/appsec-foundry/appsec-analyzer) reviews application security from source code, in one repository or across several that form one system.
 
-- Reconstructs components, data flows, and trust boundaries from code and configuration.
-- Identifies threats and control gaps. Every finding points to evidence in the repository and comes with remediation guidance.
-- Also assesses planned features and single code changes, audits requirements, and runs as a CI gate.
+- Maps components, data flows, and trust boundaries from code and configuration.
+- Checks the security controls it finds and reports findings with code references and suggested fixes.
+- Also answers security questions about code, designs, and changes, audits requirements, and exports to SARIF, HTML, PDF, and OWASP Threat Dragon.
 
+<a href="https://github.com/appsec-foundry/appsec-analyzer-examples">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/advisor-figure1-v3-dark.png">
-  <img src="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/advisor-figure1-v3.png" alt="Excerpt from Figure 1a of the OWASP Juice Shop threat model: internet attacker and users, trust boundaries, and the authentication component with its findings and assets" width="100%">
+  <img src="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/advisor-figure1-v3.png" alt="Excerpt from the architecture diagram of an OWASP Juice Shop assessment: internet attacker and users, trust boundaries, and the authentication component with its findings and assets" width="100%">
 </picture>
+</a>
 
-<sub>Excerpt from Figure 1a of the OWASP Juice Shop threat model: the architecture derived from the repository, with findings per component and the assets each layer stores.</sub>
+<sub>Excerpt from an OWASP Juice Shop assessment, created with appsec-advisor: the architecture derived from the repository, with findings per component and the assets each layer stores.</sub>
+
+[**appsec-analyzer-examples**](https://github.com/appsec-foundry/appsec-analyzer-examples) has example reports for OWASP Juice Shop and DVWA as Markdown and YAML files, with all diagrams as SVG.
 
 ```bash
-claude plugin marketplace add appsec-foundry/appsec-advisor
-claude plugin install appsec-advisor@appsec-foundry
+pipx install git+https://github.com/appsec-foundry/appsec-analyzer.git
+appsec-analyzer assess --repo https://github.com/juice-shop/juice-shop.git \
+  --output ~/assessments/juice-shop
 ```
 
-Then run `/appsec-advisor:create-threat-model` inside any repository.
+For your own code, pass its Git URL or local path to `--repo`. Analyzer needs a [model provider](https://github.com/appsec-foundry/appsec-analyzer#model-provider), which receives source excerpts. With API billing, the Juice Shop run costs about USD 15.
 
-| Companion repository | What it does |
-|---|---|
-| [**appsec-advisor-examples**](https://github.com/appsec-foundry/appsec-advisor-examples) | Example threat models for deliberately vulnerable apps such as OWASP Juice Shop, available as Markdown, HTML, PDF, YAML, SARIF, and Threat Dragon files. |
-| [**appsec-advisor-tools**](https://github.com/appsec-foundry/appsec-advisor-tools) | Scripts for running appsec-advisor from a terminal, cron job, or CI pipeline, with repository profiling and templates for GitHub Actions and GitLab CI. |
-| [**appsec-advisor-packaging-template**](https://github.com/appsec-foundry/appsec-advisor-packaging-template) | A template for packaging appsec-advisor as an internal Claude Code plugin with your organization's configuration. |
+## AppSec Skills
+
+[**appsec-skills**](https://github.com/appsec-foundry/appsec-skills) is a collection of application security skills for coding assistants, including threat analysis of changes, security scoring, and authentication and authorization reviews.
+
+[**create-threat-model**](https://github.com/appsec-foundry/appsec-skills/blob/main/skills/create-threat-model/README.md) creates a threat model from requirements, design documents, and team knowledge, even before code exists.
+
+- Writes `threat-model.md` with a system overview and diagram, threat scenarios, existing controls, and recommended changes.
+- Also reviews and updates existing models.
+- Needs neither AppSec Analyzer nor security expertise.
+
+```bash
+npx skills@1.7.2 add appsec-foundry/appsec-skills --skill create-threat-model
+```
+
+Then ask your assistant: `Use create-threat-model to create a threat model for this project.`
+
+## AppSec Tools
+
+[**appsec-tools**](https://github.com/appsec-foundry/appsec-tools) has standalone tools that run deterministically, without an LLM.
+
+- [**Security Score**](https://github.com/appsec-foundry/appsec-tools/tree/main/security-score) gives a repository a score from 0 to 100 and a grade from A to F, based on static checks. For a change, it rates the security relevance instead.
+- [**Requirement Harvester**](https://github.com/appsec-foundry/appsec-tools/tree/main/requirement-harvester) reads requirements from websites and wikis and writes them to an OSCAL catalog in YAML.
 
 ## aiscb: AI Secure Coding Baseline
 
@@ -48,6 +69,20 @@ Then run `/appsec-advisor:create-threat-model` inside any repository.
 <img src="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/aiscb-crypto-with-without.png" alt="The same prompt in Claude Code without and with aiscb: without it, Claude writes a custom cipher; with it, Claude cites the baseline rule against hand-rolled crypto and asks what the code is for" width="100%">
 
 <sub>The same prompt in Claude Code, without and with aiscb. Without the baseline, Claude writes a custom cipher. With it, Claude cites the rule against hand-rolled crypto and asks what the code is for.</sub>
+
+## AppSec Advisor
+
+[![Status: being rebuilt](https://img.shields.io/badge/status-being%20rebuilt-orange)](https://github.com/appsec-foundry/appsec-advisor)
+[![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue)](https://github.com/appsec-foundry/appsec-advisor/blob/main/LICENSE)
+[![Claude Code plugin](https://img.shields.io/badge/Claude%20Code-plugin-5A67D8)](https://github.com/appsec-foundry/appsec-advisor)
+
+[**appsec-advisor**](https://github.com/appsec-foundry/appsec-advisor) is a Claude Code plugin for application security. Most of it has moved into [appsec-analyzer](https://github.com/appsec-foundry/appsec-analyzer), and the plugin is currently being rebuilt.
+
+| Companion repository | What it does |
+|---|---|
+| [**appsec-advisor-examples**](https://github.com/appsec-foundry/appsec-advisor-examples) | Example threat models for deliberately vulnerable apps such as OWASP Juice Shop, available as Markdown, HTML, PDF, YAML, SARIF, and Threat Dragon files. |
+| [**appsec-advisor-tools**](https://github.com/appsec-foundry/appsec-advisor-tools) | Scripts for running appsec-advisor from a terminal, cron job, or CI pipeline, with repository profiling and templates for GitHub Actions and GitLab CI. |
+| [**appsec-advisor-packaging-template**](https://github.com/appsec-foundry/appsec-advisor-packaging-template) | A template for packaging appsec-advisor as an internal Claude Code plugin with your organization's configuration. |
 
 ## <img src="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/tss-web-logo.png" alt="" height="28"> TSS-WEB
 
