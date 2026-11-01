@@ -36,16 +36,6 @@ For your own code, pass its Git URL or local path to `--repo`. Analyzer needs a 
 
 - [**create-threat-model**](https://github.com/appsec-foundry/appsec-skills/blob/main/skills/create-threat-model/README.md) creates, updates, or reviews a threat model from requirements, design documents, and team knowledge, even before code exists.
 - [**analyze-threats**](https://github.com/appsec-foundry/appsec-skills/blob/main/skills/analyze-threats/README.md) examines features, changes, pull requests, or design decisions for threats.
-- [**security-score**](https://github.com/appsec-foundry/appsec-skills/blob/main/skills/security-score/README.md) scores repositories or rates the security relevance of changes, using the Security Score tool below.
-- [**authnz-review**](https://github.com/appsec-foundry/appsec-skills/blob/main/skills/authnz-review/README.md) reviews authentication and authorization through AppSec Analyzer.
-
-Install a skill with the Skills CLI, for example:
-
-```bash
-npx skills@1.7.2 add appsec-foundry/appsec-skills --skill create-threat-model
-```
-
-Then ask your assistant: `Use create-threat-model to create a threat model for this project.`
 
 ## AppSec Tools
 
@@ -82,7 +72,6 @@ Then ask your assistant: `Use create-threat-model to create a threat model for t
 | Companion repository | What it does |
 |---|---|
 | [**appsec-advisor-examples**](https://github.com/appsec-foundry/appsec-advisor-examples) | Example threat models for deliberately vulnerable apps such as OWASP Juice Shop, available as Markdown, HTML, PDF, YAML, SARIF, and Threat Dragon files. |
-| [**appsec-advisor-tools**](https://github.com/appsec-foundry/appsec-advisor-tools) | Scripts for running appsec-advisor from a terminal, cron job, or CI pipeline, with repository profiling and templates for GitHub Actions and GitLab CI. |
 | [**appsec-advisor-packaging-template**](https://github.com/appsec-foundry/appsec-advisor-packaging-template) | A template for packaging appsec-advisor as an internal Claude Code plugin with your organization's configuration. |
 
 ## <img src="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/tss-web-logo.png" alt="" height="28"> TSS-WEB
