@@ -34,6 +34,11 @@ Open-source application security projects, mostly with an AI focus: AppSec Analy
 [**appsec-tools**](https://github.com/appsec-foundry/appsec-tools) has standalone tools that run deterministically, without an LLM.
 
 - [**Security Score**](https://github.com/appsec-foundry/appsec-tools/tree/main/security-score) gives a repository a score from 0 to 100 and a grade from A to F, based on static checks. For a change, it rates the security relevance instead.
+
+  <a href="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/security-score-details.png"><img src="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/security-score-details-crop.png" alt="Excerpt of security-score --details on Juice Shop: repository overview, then the score and findings for the Repository and Authentication topics" width="100%"></a>
+
+  <sub>Excerpt of `security-score --details` on OWASP Juice Shop, which is insecure on purpose. "partial" means that some topics could not be assessed, so there is no grade.</sub>
+
 - [**Requirement Harvester**](https://github.com/appsec-foundry/appsec-tools/tree/main/requirement-harvester) reads requirements from websites and wikis and writes them to an OSCAL catalog in YAML.
 
 ## aiscb: AI Secure Coding Baseline
