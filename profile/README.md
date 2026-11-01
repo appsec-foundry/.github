@@ -1,15 +1,15 @@
-Open-source application security projects, mostly with an AI focus: AppSec Analyzer for security assessments from source code, AppSec Skills for threat modeling and security reviews with coding assistants, AppSec Tools for security scoring and requirements, aiscb for secure coding with AI assistants, and the discontinued TSS-WEB requirements framework.
+Open-source application security projects, mostly with an AI focus: AppSec Analyzer for threat assessments of repositories, AppSec Skills for threat modeling and security reviews with coding assistants, AppSec Tools for security scoring and requirements, aiscb for secure coding with AI assistants, and the discontinued TSS-WEB requirements framework.
 
 ## AppSec Analyzer
 
 [![Status: alpha](https://img.shields.io/badge/status-alpha-orange)](https://github.com/appsec-foundry/appsec-analyzer)
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue)](https://github.com/appsec-foundry/appsec-analyzer/blob/main/LICENSE)
 
-[**appsec-analyzer**](https://github.com/appsec-foundry/appsec-analyzer) reviews application security from source code, in one repository or across several that form one system.
+[**appsec-analyzer**](https://github.com/appsec-foundry/appsec-analyzer) is a command-line tool for threat assessments of local and remote repositories. A deterministic controller runs the assessment and integrates the LLM: Claude by default, Codex and other providers experimentally.
 
-- Maps components, data flows, and trust boundaries from code and configuration.
-- Checks the security controls it finds and reports findings with code references and suggested fixes.
-- Also answers security questions about code, designs, and changes, audits requirements, and exports to SARIF, HTML, PDF, and OWASP Threat Dragon.
+- Combines deterministic scanners, a STRIDE-based threat survey, a catalog-based verifier, and abuse case checks. You can add your own abuse cases.
+- Writes a clear Markdown report and a YAML data file, and exports to PDF, HTML, and other formats.
+- Opens the findings directly in Claude Code or Codex for further analysis.
 
 <a href="https://github.com/appsec-foundry/appsec-analyzer-examples">
 <picture>
@@ -21,14 +21,6 @@ Open-source application security projects, mostly with an AI focus: AppSec Analy
 <sub>Excerpt from an OWASP Juice Shop assessment, created with appsec-advisor: the architecture derived from the repository, with findings per component and the assets each layer stores.</sub>
 
 [**appsec-analyzer-examples**](https://github.com/appsec-foundry/appsec-analyzer-examples) has example reports for OWASP Juice Shop and DVWA as Markdown and YAML files, with all diagrams as SVG.
-
-```bash
-pipx install git+https://github.com/appsec-foundry/appsec-analyzer.git
-appsec-analyzer assess --repo https://github.com/juice-shop/juice-shop.git \
-  --output ~/assessments/juice-shop
-```
-
-For your own code, pass its Git URL or local path to `--repo`. Analyzer needs a [model provider](https://github.com/appsec-foundry/appsec-analyzer#model-provider), which receives source excerpts. With API billing, the Juice Shop run costs about USD 15.
 
 ## AppSec Skills
 
