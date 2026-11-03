@@ -22,14 +22,9 @@ Open-source application security projects, mostly with an AI focus: AppSec Analy
 
 [**appsec-analyzer-examples**](https://github.com/appsec-foundry/appsec-analyzer-examples) has example reports for OWASP Juice Shop and DVWA as Markdown and YAML files, with all diagrams as SVG.
 
-## AppSec Skills
-
-[**appsec-skills**](https://github.com/appsec-foundry/appsec-skills) is a collection of application security skills for coding assistants, including:
-
-- [**create-threat-model**](https://github.com/appsec-foundry/appsec-skills/blob/main/skills/create-threat-model/README.md) creates, updates, or reviews a threat model from requirements, design documents, and team knowledge, even before code exists.
-- [**analyze-threats**](https://github.com/appsec-foundry/appsec-skills/blob/main/skills/analyze-threats/README.md) examines features, changes, pull requests, or design decisions for threats.
-
 ## AppSec Tools
+
+[![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue)](https://github.com/appsec-foundry/appsec-tools/blob/main/LICENSE)
 
 [**appsec-tools**](https://github.com/appsec-foundry/appsec-tools) has standalone tools that run deterministically, without an LLM.
 
@@ -40,6 +35,15 @@ Open-source application security projects, mostly with an AI focus: AppSec Analy
   <sub>Excerpt of `security-score --details` on OWASP Juice Shop, which is insecure on purpose. "partial" means that some topics could not be assessed, so there is no grade.</sub>
 
 - [**Requirement Harvester**](https://github.com/appsec-foundry/appsec-tools/tree/main/requirement-harvester) reads requirements from websites and wikis and writes them to an OSCAL catalog in YAML.
+
+## AppSec Skills
+
+[![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue)](https://github.com/appsec-foundry/appsec-skills/blob/main/LICENSE)
+
+[**appsec-skills**](https://github.com/appsec-foundry/appsec-skills) is a collection of application security skills for coding assistants, including:
+
+- [**create-threat-model**](https://github.com/appsec-foundry/appsec-skills/blob/main/skills/create-threat-model/README.md) creates, updates, or reviews a threat model from requirements, design documents, and team knowledge, even before code exists.
+- [**analyze-threats**](https://github.com/appsec-foundry/appsec-skills/blob/main/skills/analyze-threats/README.md) examines features, changes, pull requests, or design decisions for threats.
 
 ## aiscb: AI Secure Coding Baseline
 
