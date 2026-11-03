@@ -2,7 +2,6 @@ Open-source application security projects, mostly with an AI focus: AppSec Analy
 
 ## AppSec Analyzer
 
-[![Status: alpha](https://img.shields.io/badge/status-alpha-orange)](https://github.com/appsec-foundry/appsec-analyzer)
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue)](https://github.com/appsec-foundry/appsec-analyzer/blob/main/LICENSE)
 
 [**appsec-analyzer**](https://github.com/appsec-foundry/appsec-analyzer) is a command-line tool for threat assessments of local and remote repositories. A deterministic controller runs the assessment and integrates the LLM: Claude by default, Codex and other providers experimentally.
