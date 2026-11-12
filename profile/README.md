@@ -1,4 +1,4 @@
-Open-source application security projects, mostly with an AI focus: AppSec Analyzer for threat assessments of repositories, AppSec Skills for threat modeling and security reviews with coding assistants, AppSec Tools for security scoring and requirements, aiscb for secure coding with AI assistants, and the discontinued TSS-WEB requirements framework.
+Open-source application security projects, mostly with an AI focus: AppSec Analyzer for threat assessments of repositories, AppSec Verifier for testing their findings in the running application, AppSec Skills for threat modeling and security reviews with coding assistants, AppSec Tools for security scoring and requirements, aiscb for secure coding with AI assistants, and the discontinued TSS-WEB requirements framework.
 
 ## AppSec Analyzer
 
@@ -20,6 +20,22 @@ Open-source application security projects, mostly with an AI focus: AppSec Analy
 <sub>Excerpt from an OWASP Juice Shop assessment, created with appsec-advisor: the architecture derived from the repository, with findings per component and the assets each layer stores.</sub>
 
 [**appsec-analyzer-examples**](https://github.com/appsec-foundry/appsec-analyzer-examples) has example reports for OWASP Juice Shop and DVWA as Markdown and YAML files, with all diagrams as SVG.
+
+## AppSec Verifier
+
+[![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue)](https://github.com/appsec-foundry/appsec-verifier/blob/main/LICENSE)
+
+[**appsec-verifier**](https://github.com/appsec-foundry/appsec-verifier) is a command-line tool that tests whether the findings of an appsec-analyzer assessment can be reproduced in the running application. It uses Claude by default, Codex and GitHub Copilot as alternatives.
+
+- Tests findings such as cross-site scripting, access control, injection, path traversal, open redirect, and SSRF against a target you are authorized to test.
+- An AI agent plans the test steps. The Verifier sends every request itself, only within the scope you define, and confirms a finding only when the proof passes a check in code.
+- Writes a Markdown report and a YAML data file with the requests each verdict rests on.
+
+<a href="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/verifier-evidence.png"><img src="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/verifier-evidence-crop.png" alt="Evidence image of a NoSQL injection in OWASP Juice Shop: the false condition returns 0 review entries, the true condition 2" width="100%"></a>
+
+<sub>Evidence image from a run against OWASP Juice Shop. The NoSQL injection is confirmed because the product reviews return 0 entries for the false condition and 2 for the true one.</sub>
+
+The [Juice Shop example](https://github.com/appsec-foundry/appsec-verifier/tree/main/examples/juice-shop) has the complete run with console log, report, and all evidence images.
 
 ## AppSec Tools
 
