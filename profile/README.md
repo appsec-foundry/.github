@@ -31,9 +31,9 @@ Open-source application security projects, mostly with an AI focus.
 - An AI agent plans the test steps. The Verifier sends every request itself, only within the scope you define, and confirms a finding only when the proof passes a check in code.
 - Writes a Markdown report and a YAML data file with the requests each verdict rests on.
 
-<a href="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/verifier-evidence.png"><img src="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/verifier-evidence-crop.png" alt="Evidence image of a NoSQL injection in OWASP Juice Shop: the false condition returns 0 review entries, the true condition 2" width="100%"></a>
+<a href="https://github.com/appsec-foundry/appsec-verifier/blob/main/examples/juice-shop/result/console.log.md"><img src="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/verifier-console.png" alt="Console output of a run against OWASP Juice Shop: the test agent tests a NoSQL injection finding, the proof check passes and the finding is confirmed" width="100%"></a>
 
-<sub>Evidence image from a run against OWASP Juice Shop. The NoSQL injection is confirmed because the product reviews return 0 entries for the false condition and 2 for the true one.</sub>
+<sub>Console output from a run against OWASP Juice Shop. The test agent tests the NoSQL injection in the product reviews, the proof passes the check in code, and the finding is confirmed.</sub>
 
 The [Juice Shop example](https://github.com/appsec-foundry/appsec-verifier/tree/main/examples/juice-shop) has the complete run with console log, report, and all evidence images.
 
