@@ -25,15 +25,20 @@ Open-source application security projects, mostly with an AI focus.
 
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue)](https://github.com/appsec-foundry/appsec-verifier/blob/main/LICENSE)
 
-[**appsec-verifier**](https://github.com/appsec-foundry/appsec-verifier) is a command-line tool that tests whether the findings of an appsec-analyzer assessment can be reproduced in the running application. It uses Claude by default, Codex and GitHub Copilot as alternatives.
+[**appsec-verifier**](https://github.com/appsec-foundry/appsec-verifier) is a command-line tool that tests whether the findings of an appsec-analyzer assessment hold up in a running application you are authorized to test. It uses Claude by default, Codex and GitHub Copilot as alternatives.
 
-- Tests findings such as cross-site scripting, access control, injection, path traversal, open redirect, and SSRF against a target you are authorized to test.
-- An AI agent plans the test steps. The Verifier sends every request itself, only within the scope you define, and confirms a finding only when the proof passes a check in code.
-- Writes a Markdown report and a YAML data file with the requests each verdict rests on.
+- An AI agent plans the tests, but only a check in code confirms a finding, never the model's verdict alone.
+- Tests cross-site scripting, access control, injection, path traversal, open redirect, and SSRF. Every request stays within the scope you define.
+- Shows the requests behind each verdict, with evidence images and a HAR file.
 
-<a href="https://github.com/appsec-foundry/appsec-verifier/blob/main/examples/juice-shop/result/console.log.md"><img src="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/verifier-console.png" alt="Console output of a run against OWASP Juice Shop: the test agent tests a NoSQL injection finding, the proof check passes and the finding is confirmed" width="100%"></a>
+<a href="https://github.com/appsec-foundry/appsec-verifier/blob/main/examples/juice-shop/result/verification.md#t-004">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/verifier-evidence-sqli-dark.png">
+  <img src="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/verifier-evidence-sqli.png" alt="Evidence image of a SQL injection in OWASP Juice Shop: q=apple' gets status 500 with an SQLITE_ERROR, q=apple'' gets 200 with an empty result" width="100%">
+</picture>
+</a>
 
-<sub>Console output from a run against OWASP Juice Shop. The test agent tests the NoSQL injection in the product reviews, the proof passes the check in code, and the finding is confirmed.</sub>
+<sub>Evidence image from a run against OWASP Juice Shop. A single quote in the search parameter `q` causes a database error and two quotes do not, so the Verifier confirms the SQL injection.</sub>
 
 The [Juice Shop example](https://github.com/appsec-foundry/appsec-verifier/tree/main/examples/juice-shop) has the complete run with console log, report, and all evidence images.
 
@@ -45,7 +50,12 @@ The [Juice Shop example](https://github.com/appsec-foundry/appsec-verifier/tree/
 
 - [**Security Score**](https://github.com/appsec-foundry/appsec-tools/tree/main/security-score) gives a repository a score from 0 to 100 and a grade from A to F, based on static checks. For a change, it rates the security relevance instead.
 
-  <a href="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/security-score-details.png"><img src="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/security-score-details-crop.png" alt="Excerpt of security-score --details on Juice Shop: repository overview, then the score and findings for the Repository and Authentication topics" width="100%"></a>
+  <a href="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/security-score-details.png">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/security-score-details-crop-dark.png">
+    <img src="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/security-score-details-crop.png" alt="Excerpt of security-score --details on Juice Shop: repository overview, then the score and findings for the Repository and Authentication topics" width="100%">
+  </picture>
+  </a>
 
   <sub>Excerpt of `security-score --details` on OWASP Juice Shop, which is insecure on purpose. "partial" means that some topics could not be assessed, so there is no grade.</sub>
 
@@ -71,7 +81,10 @@ The [Juice Shop example](https://github.com/appsec-foundry/appsec-verifier/tree/
 - Topic modules such as web, authentication, secrets, or supply chain load only when a task needs them.
 - The assistant applies the rules while it writes code and reports remaining risks in a security note.
 
-<img src="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/aiscb-crypto-with-without.png" alt="The same prompt in Claude Code without and with aiscb: without it, Claude writes a custom cipher; with it, Claude cites the baseline rule against hand-rolled crypto and asks what the code is for" width="100%">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/aiscb-crypto-with-without-dark.png">
+  <img src="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/aiscb-crypto-with-without.png" alt="The same prompt in Claude Code without and with aiscb: without it, Claude writes a custom cipher; with it, Claude cites the baseline rule against hand-rolled crypto and asks what the code is for" width="100%">
+</picture>
 
 <sub>The same prompt in Claude Code, without and with aiscb. Without the baseline, Claude writes a custom cipher. With it, Claude cites the rule against hand-rolled crypto and asks what the code is for.</sub>
 
