@@ -61,15 +61,6 @@ The [Juice Shop example](https://github.com/appsec-foundry/appsec-verifier/tree/
 
 - [**Requirement Harvester**](https://github.com/appsec-foundry/appsec-tools/tree/main/requirement-harvester) reads requirements from websites and wikis and writes them to an OSCAL catalog in YAML.
 
-## AppSec Skills
-
-[![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue)](https://github.com/appsec-foundry/appsec-skills/blob/main/LICENSE)
-
-[**appsec-skills**](https://github.com/appsec-foundry/appsec-skills) is a collection of application security skills for coding assistants, including:
-
-- [**create-threat-model**](https://github.com/appsec-foundry/appsec-skills/blob/main/skills/create-threat-model/README.md) creates, updates, or reviews a threat model from requirements, design documents, and team knowledge, even before code exists.
-- [**analyze-threats**](https://github.com/appsec-foundry/appsec-skills/blob/main/skills/analyze-threats/README.md) examines features, changes, pull requests, or design decisions for threats.
-
 ## aiscb: AI Secure Coding Baseline
 
 [![Latest release](https://img.shields.io/github/v/release/appsec-foundry/aiscb)](https://github.com/appsec-foundry/aiscb/releases/latest)
@@ -98,6 +89,24 @@ The [Juice Shop example](https://github.com/appsec-foundry/appsec-verifier/tree/
 
 - [**appsec-advisor-examples**](https://github.com/appsec-foundry/appsec-advisor-examples) has example threat models for OWASP Juice Shop and other deliberately vulnerable apps.
 - [**appsec-advisor-packaging-template**](https://github.com/appsec-foundry/appsec-advisor-packaging-template) is a template for packaging appsec-advisor as an internal plugin with your organization's configuration.
+
+  <a href="https://github.com/appsec-foundry/appsec-advisor-packaging-template">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/orgpackaging-dark.png">
+    <img src="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/orgpackaging.png" alt="Rollout diagram: a pinned appsec-advisor release is packaged with the organization profile in Acme's internal SCM, published to a developer portal, and installed by developers, who create threat models for internal repositories with Claude Code" width="100%">
+  </picture>
+  </a>
+
+  <sub>Example rollout at Acme: an internal repository packages a pinned appsec-advisor release with the organization profile. Developers install the result and create threat models with Claude Code.</sub>
+
+## AppSec Skills
+
+[![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue)](https://github.com/appsec-foundry/appsec-skills/blob/main/LICENSE)
+
+[**appsec-skills**](https://github.com/appsec-foundry/appsec-skills) is a collection of application security skills for coding assistants, including:
+
+- [**create-threat-model**](https://github.com/appsec-foundry/appsec-skills/blob/main/skills/create-threat-model/README.md) creates, updates, or reviews a threat model from requirements, design documents, and team knowledge, even before code exists.
+- [**analyze-threats**](https://github.com/appsec-foundry/appsec-skills/blob/main/skills/analyze-threats/README.md) examines features, changes, pull requests, or design decisions for threats.
 
 ## <img src="https://raw.githubusercontent.com/appsec-foundry/.github/main/profile/images/tss-web-logo.png" alt="" height="28"> TSS-WEB
 
